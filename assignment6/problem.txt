@@ -1,0 +1,21 @@
+Assignment-6
+
+Write a C program, call it newBash, that takes a script
+file as input and interprets it the same way as Bash. Your
+program read each line then, assembles and executes each
+command. Note that piping can be present. To make it
+simple, you can assume that there are no control
+structures, like if or loops.
+
+Examples of a 4-line input script file:
+• ls | wc -w
+• date; echo I printed date
+• ps -ef
+• more file.tx | grep bigFoot
+
+In particular,
+ - you should only use Unix I/O system calls.
+ - check how many commands in a line, separate them
+ and fork the appropriate number of children.
+ - a semi-column is equivalent to a new line in a script
+ file

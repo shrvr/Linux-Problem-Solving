@@ -1,0 +1,40 @@
+#!/bin/bash
+tarDir=".";
+arcDir="archiveDirectory";
+while getopts "t:a:" arg
+do  
+    case "${arg}" in
+    t)  tarDir=$OPTARG ;;
+    a)  arcDir=$OPTARG ;;
+    *)  echo "usage: $0 [-a arcDir] [-t targetDir] <extension-list>"
+        echo "or"
+        echo "usage: $0 [-t targetDir] [-a arcDir] <extension-list>"
+        exit 1
+        ;;
+    esac
+done
+
+if [ ! -d $arcDir ] # Creates archive directory in current directory if does not exist
+then
+	mkdir ${arcDir}
+fi
+
+# checks existance and writing permission for targat directory
+if [ -d $tarDir ]
+then
+    if [ ! -w $tarDir ]
+    then
+        echo "$0 : Sorry, No writting permission for targat directory"
+        exit 1;
+    fi
+else
+    echo "$0 : The targat directoy does not exist "
+    exit 1;
+fi
+
+#finds and moves files of extension to archive directory 
+for ext in ${@:$OPTIND:$#}
+do 
+    find $tarDir -name "*.$ext" -exec mv {} $arcDir \;
+done
+

@@ -1,0 +1,36 @@
+#!/bin/bash
+tarer(){	# $1 = archive directory $2 = targat directory
+	for dir in $2/*/ ; do
+		name="$(basename "${dir}")";
+		tar -zcvf $name.tar.gz $dir
+		if [ ! -d $1 ] #Create archive directory if it does not exist
+		then
+			mkdir $1
+		fi
+		mv $name.tar.gz $1
+	done
+}
+
+if [[ $# -eq 2 ]] # for command type $ tarDirs <-a archive-directory>
+then
+	if [[ $1 == "-a" ]]
+	then
+		tarer $2  
+	fi
+
+elif [[ $# -eq 4 ]] # for command with four arguments
+then
+	if [[ $1 == "-a" ]] 
+	then	
+		tarer $2 $4
+	else
+		tarer $4 $2
+	fi
+else
+	echo "Not a proper command"
+	echo "The correct syntaxes are as follow: "
+	echo "tarDirs [-t target-directory] <-a archive-directory>"
+	echo "tarDirs <-a archive-directory> [-t target-directory]"
+	echo 	"tarDirs <-a archive-directory>"
+	echo "NOTE: if you do not put \"/\" at the end of targate directory path then it will only make tar of that directory not it's all sub-directories"	
+fi
