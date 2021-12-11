@@ -6,7 +6,7 @@ Using Unix I/O system calls(read(), write(), lseek(),...), write a C program, ca
 
 Original Image             |  After Rotation
 :-------------------------:|:-------------------------:
-![original_Image](/../master/assignment4/m1.jpg?raw=true "Optional Title" | width=100)  |  ![rotated_Image](/../master/assignment4/m1_r.jpg?raw=true "Optional Title" | width=100) 
+![original_Image](/../master/assignment4/m1.jpg?raw=true "Optional Title")  |  ![rotated_Image](/../master/assignment4/m1_r.jpg?raw=true "Optional Title") 
 
 The input image is a gray-scale picture, where each pixel has a value between 0(black) and 255(white). The image is simply an nbLines × nbCols matrix of bytes, where each byte store the gray-level of the corresponding pixel.
 
