@@ -24,14 +24,14 @@ Your script should print the correct syntax for the call when the user does not 
 
 Some sample runs:
 
-####Case 1: tar from current directory
+#### Case 1: tar from current directory
 ```bash
 $tarDirs -a ∼/myArchive
 ```
 Script tars each directory in current directory then move
 all of them to ∼/myArchive (∼ is home directory).
 
-####Case 2: tar from a target-directory.
+#### Case 2: tar from a target-directory.
 ```bash
 $tarDirs -a myArchive -t /home/users/bigFoot/
 ```
