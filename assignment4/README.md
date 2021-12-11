@@ -4,7 +4,9 @@
 
 Using Unix I/O system calls(read(), write(), lseek(),...), write a C program, called reversePicture, to transform a given picture into an up-side-down picture. In particular, your program should reverse the image by directly reading from one file and writing to another file, without the need of a two-dimensional array.
 
-![original_Image](/../master/assignment4/m1.jpg?raw=true "Optional Title") | ![original_Image](/../master/assignment4/m1_r.jpg?raw=true "Optional Title") 
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![original_Image](/../master/assignment4/m1.jpg?raw=true "Optional Title")  |  ![original_Image](/../master/assignment4/m1_r.jpg?raw=true "Optional Title") 
 
 The input image is a gray-scale picture, where each pixel has a value between 0(black) and 255(white). The image is simply an nbLines × nbCols matrix of bytes, where each byte store the gray-level of the corresponding pixel.
 
