@@ -4,7 +4,7 @@
 
 Read the manual of command find then write a Bash script, call it myArchive, to move all files, in a directory hierarchy, with specific extensions to a target directory.
 
-Synopsis:
+### Synopsis:
 ```bash
 $myArchive [-t targetDir] [-a arcDir] <extension-list>.
 ```
@@ -24,7 +24,7 @@ or
 $myArchive [-t targetDir] [-a arcDir] <extension-list>
 ```
 
-Some sample runs:
+### Some sample runs:
 
 #### Case 1:
 ```bash
