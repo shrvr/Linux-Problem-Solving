@@ -1,4 +1,4 @@
-# Assignment 6
+# Create Bash Interpreter
 
 ## Problem:
 
